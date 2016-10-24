@@ -10,17 +10,19 @@
 }
 
 .EliHead {
+    border-style: solid;
     z-index: 10;
     position: absolute;
     height: 80px;
-    width: 80px;
+    width: 90px;
     margin-left: 72vw;
-    margin-top: 20px;
+    margin-top: 5vh;
 }
 
 .lineForHead {
+    z-index: 1;
     position: absolute;
-    margin-left: 38vw;
+    margin-left: 37vw;
     margin-top: 4vw;
     height: 3vh;
     width: 32vw;
@@ -32,6 +34,8 @@
 }
 
 .IQInfo {
+    z-index: 10;
+    background-color: white;
     border-bottom: 2px solid red;
     border-right: 2px solid red;
     -moz-transform: skew(-45deg, 0deg);
@@ -43,8 +47,8 @@
 }
 
 .IQText {
-    margin-right:25px;
-    display:inline-block;
+    margin-right: 2vw;
+    display: inline-block;
     color: blue;
     -moz-transform: skew(45deg, 0deg);
     -webkit-transform: skew(45deg, 0deg);
@@ -61,6 +65,66 @@ display:inline;
 }
 
 .everythingIQ {
+    display: none;
+}
+
+
+/*
+BEGINNING OF ARM
+*/
+
+.EliArm {
+    border-style: solid;
+    z-index: 10;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin-left: 55vw;
+    margin-top: 29vh;
+}
+
+.lineForArm {
+    z-index: 1;
+    position: absolute;
+    margin-left: 29.5vw;
+    margin-top: 35vh;
+    height: 3vh;
+    width: 25vw;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    -moz-transform: skew(-45deg, 0deg);
+    -webkit-transform: skew(-45deg, 0deg);
+    transform: skew(-45deg, 0deg);
+}
+
+.ArmInfo {
+    z-index: 10;
+    background: white;
+    width: 20vw;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    -moz-transform: skew(-45deg, 0deg);
+    -webkit-transform: skew(-45deg, 0deg);
+    transform: skew(-45deg, 0deg);
+    margin-left: 5vw;
+    margin-top: 35vh;
+    position: absolute;
+}
+
+.ArmText {
+    margin-right: 2vw;
+    display: inline-block;
+    color: blue;
+    -moz-transform: skew(45deg, 0deg);
+    -webkit-transform: skew(45deg, 0deg);
+    transform: skew(45deg, 0deg);
+}
+
+.EliArm:hover + div {
+    display: inline;
+}
+
+.everythingArm {
     display: none;
 }
 
@@ -112,6 +176,8 @@ display:inline;
 }
 
 .EliName {
+    height: 100%;
+    width: auto;
     float: right;
     position: relative;
     -webkit-animation: EliName 1.7s;
