@@ -1,0 +1,153 @@
+.wholeScreen {
+    margin: auto;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: contrast(150%);
+    background-image: url("./images/Stroke.png");
+}
+
+.EliHead {
+    z-index: 10;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin-left: 72vw;
+    margin-top: 20px;
+}
+
+.lineForHead {
+    position: absolute;
+    margin-left: 38vw;
+    margin-top: 4vw;
+    height: 3vh;
+    width: 32vw;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    -moz-transform: skew(-45deg, 0deg);
+    -webkit-transform: skew(-45deg, 0deg);
+    transform: skew(-45deg, 0deg);
+}
+
+.IQInfo {
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    -moz-transform: skew(-45deg, 0deg);
+    -webkit-transform: skew(-45deg, 0deg);
+    transform: skew(-45deg, 0deg);
+    margin-left: 23vw;
+    margin-top: 4.5vw;
+    position: absolute;
+}
+
+.IQText {
+    margin-right:25px;
+    display:inline-block;
+    color: blue;
+    -moz-transform: skew(45deg, 0deg);
+    -webkit-transform: skew(45deg, 0deg);
+    transform: skew(45deg, 0deg);
+}
+
+
+/*.EliHead:hover  .lineForHead{
+display:inline;
+}*/
+
+.EliHead:hover + div {
+    display: inline;
+}
+
+.everythingIQ {
+    display: none;
+}
+
+.Eli {
+    height: 100vh;
+    position: relative;
+    -webkit-animation: eli 1.7s;
+    -moz-animation: eli 1.7s;
+    animation: eli 1.7s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+@-webkit-keyframes eli {
+    0% {
+        left: 0px;
+        opacity: 0;
+    }
+    100% {
+        left: 55vw;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes eli {
+    0% {
+        left: 0px;
+        opacity: 0;
+    }
+    100% {
+        left: 55vw;
+        opacity: 1;
+    }
+}
+
+@keyframes eli {
+    0% {
+        left: 0px;
+        opacity: 0;
+    }
+    100% {
+        left: 55vw;
+        opacity: 1;
+    }
+}
+
+.EliName {
+    float: right;
+    position: relative;
+    -webkit-animation: EliName 1.7s;
+    -moz-animation: EliName 1.7s;
+    animation: EliName 1.7s;
+}
+
+@-webkit-keyframes EliName {
+    0% {
+        top: -700px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes EliName {
+    0% {
+        top: -700px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes EliName {
+    0% {
+        top: -700px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
