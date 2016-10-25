@@ -4,9 +4,60 @@
     -moz-transform: skew(-45deg, 0deg);
     -webkit-transform: skew(-45deg, 0deg);
     transform: skew(-45deg, 0deg);
-
 }
 
+.photoOdell{
+    height:20vh;
+    position: absolute;
+    opacity: 0;
+    -webkit-animation: appear 2.7s;
+    -moz-animation: appear 2.7s;
+    -webkit-animation-delay: 7s;
+    animation: appear 2.7s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+}
+
+@-webkit-keyframes appear {
+    1% {
+        margin-top:120vh;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 78vh;
+        opacity: 1;
+        position: absolute;
+    }
+}
+
+@-moz-keyframes appear {
+    0% {
+        bottom: -20vh;
+        opacity: 0;
+    }
+    100% {
+           bottom: 0vh;
+        opacity: 1;
+        position: absolute;
+    }
+}
+
+@keyframes appear {
+    0% {
+        bottom: -20vh;
+        opacity: 0;
+    }
+    100% {
+           bottom: 0vh;
+        opacity: 1;
+        position: absolute;
+    }
+}
 
 
 #hoverTarget {
@@ -37,12 +88,42 @@
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
 }
+.hoverOdell {
+    border-color: transparent;
+    -webkit-animation: borderDraw 1.5s;
+    -moz-animation: borderDraw 1.5s;
+    animation: borderDraw 1.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.odellCircle{
+    height: 10vh;
+    width: 10vh;
+    margin-left: 1vw;
+    margin-top: 80vh;
+}
 
 .hoverOver:hover + div {
     display: inline;
 }
 
 .hoverOver:hover {
+    -webkit-animation: borderDraw 1.5s;
+    -moz-animation: borderDraw 1.5s;
+    animation: borderDraw 1.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
+.hoverOdell:hover {
     -webkit-animation: borderDraw 1.5s;
     -moz-animation: borderDraw 1.5s;
     animation: borderDraw 1.5s;
@@ -74,10 +155,10 @@
 
 @-webkit-keyframes ringDraw {
     from {
-        width:0%;
+        width: 0%;
     }
     to {
-        width:43vw;
+        width: 43vw;
     }
 }
 
@@ -138,13 +219,13 @@
     margin-left: 30vw;
     margin-top: 4vw;
     height: 3vh;
-    width: 42vw;    -webkit-animation: ringDraw .5s;
+    width: 42vw;
+    -webkit-animation: ringDraw .5s;
     -moz-animation: ringDraw .5s;
     animation: ringDraw .5s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 }
-
 
 .IQInfo {
     z-index: 10;
@@ -162,11 +243,6 @@
     display: none;
 }
 
-
-/*
-BEGINNING OF ARM
-*/
-
 .EliArm {
     height: 80px;
     width: 80px;
@@ -181,7 +257,7 @@ BEGINNING OF ARM
     margin-top: 35vh;
     height: 3vh;
     width: 35vw;
-        -webkit-animation: armDraw .5s;
+    -webkit-animation: armDraw .5s;
     -moz-animation: armDraw .5s;
     animation: armDraw .5s;
     animation-fill-mode: forwards;
@@ -190,12 +266,11 @@ BEGINNING OF ARM
 
 @-webkit-keyframes armDraw {
     from {
-        width:0%;
+        width: 0%;
     }
     to {
-        width:35vw;
+        width: 35vw;
     }
-
 }
 
 .ArmInfo {
@@ -284,9 +359,9 @@ BEGINNING OF ARM
     height: 100vh;
     filter: contrast(150%);
     background-image: url("./images/Stroke.png");
-    -webkit-animation: bgStroke 1.3s ease;
+    -webkit-animation: bgStroke 1s ease;
     -webkit-animation-fill-mode: backwards;
-    animation: bgStroke 1.3s ease;
+    animation: bgStroke 1s ease;
 }
 
 @-webkit-keyframes bgStroke {
@@ -314,4 +389,9 @@ BEGINNING OF ARM
     100% {
         height: 100vh;
     }
+}
+
+
+body{
+    margin:0px;a
 }
