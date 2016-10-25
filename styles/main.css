@@ -1,10 +1,58 @@
+#lineInfo {
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    -moz-transform: skew(-45deg, 0deg);
+    -webkit-transform: skew(-45deg, 0deg);
+    transform: skew(-45deg, 0deg);
 
-.EliRing {
-       border-radius: 100%;
-    border-style:dotted;
-    border-color:transparent;
+}
+
+
+
+#hoverTarget {
+    border-style: dotted;
+    border-color: transparent;
+    border-radius: 100%;
     z-index: 10;
     position: absolute;
+}
+
+#text {
+    display: inline-block;
+    color: blue;
+    -moz-transform: skew(45deg, 0deg);
+    -webkit-transform: skew(45deg, 0deg);
+    transform: skew(45deg, 0deg);
+}
+
+.hoverOver {
+    border-color: transparent;
+    -webkit-animation: borderDraw 1.5s;
+    -moz-animation: borderDraw 1.5s;
+    animation: borderDraw 1.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.hoverOver:hover + div {
+    display: inline;
+}
+
+.hoverOver:hover {
+    -webkit-animation: borderDraw 1.5s;
+    -moz-animation: borderDraw 1.5s;
+    animation: borderDraw 1.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.EliRing {
     height: 10vh;
     width: 10vh;
     margin-left: 65vw;
@@ -17,22 +65,25 @@
     margin-left: 20vw;
     margin-top: 30vh;
     height: 3vh;
-    width: 45vw;
-    border-bottom: 2px solid red;
-    border-right: 2px solid red;
-    -moz-transform: skew(-45deg, 0deg);
-    -webkit-transform: skew(-45deg, 0deg);
-    transform: skew(-45deg, 0deg);
+    -webkit-animation: ringDraw .5s;
+    -moz-animation: ringDraw .5s;
+    animation: ringDraw .5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes ringDraw {
+    from {
+        width:0%;
+    }
+    to {
+        width:43vw;
+    }
 }
 
 .RingInfo {
     z-index: 10;
     background-color: white;
-    border-bottom: 2px solid red;
-    border-right: 2px solid red;
-    -moz-transform: skew(-45deg, 0deg);
-    -webkit-transform: skew(-45deg, 0deg);
-    transform: skew(-45deg, 0deg);
     margin-left: 6vw;
     margin-top: 27vh;
     position: absolute;
@@ -40,81 +91,41 @@
 
 .RingText {
     margin-right: 2vw;
-    display: inline-block;
-    color: blue;
-    -moz-transform: skew(45deg, 0deg);
-    -webkit-transform: skew(45deg, 0deg);
-    transform: skew(45deg, 0deg);
 }
 
-
-/*.EliHead:hover  .lineForHead{
-display:inline;
-}*/
-
-.EliRing:hover + div {
-    display: inline;
-}
-
-.EliRing:hover{
- -webkit-animation: borderDraw 3s;
-    -moz-animation: borderDraw 3s;
-    animation: borderDraw 3s;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-       -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-    animation-iteration-count: infinite;
-  border-color:blue;
-
-}
-
-@-webkit-keyframes borderDraw{
-    0%{
-         border-top-color:red;
-      transition: width 1s ease-in-out;
-      transform:rotate(0deg);
-
+@-webkit-keyframes borderDraw {
+    0% {
+        border-top-color: red;
+        transition: width 1s ease-in-out;
+        transform: rotate(90deg);
     }
     25% {
-      border-top-color:red;
-      transition: width 1s ease-in-out;
-      transform:rotate(90deg);
+        border-top-color: red;
+        transition: width 1s ease-in-out;
+        transform: rotate(180deg);
     }
-    50%{
-        border-left-color:red;
+    50% {
+        border-left-color: red;
         transition: height 1s ease-in-out;
-        transform:rotate(180deg);
+        transform: rotate(270deg);
     }
-     75%
-    {
-       border-bottom-color:red;
-      transition: width 1s ease-in-out;
-      transform:rotate(270deg);
+    75% {
+        border-bottom-color: red;
+        transition: width 1s ease-in-out;
+        transform: rotate(360deg);
     }
-    100%
-    {
-       border-right-color:red;
-      transition: width 1s ease-in-out;
-      transform:rotate(360deg);
+    99% {
+        border-right-color: red;
+        transition: width 1s ease-in-out;
+        transform: rotate(0deg);
     }
 }
-
-
-
 
 .everythingRing {
     display: none;
 }
 
-
-
-
 .EliHead {
-    border-style: dotted;
-    border-color:transparent;
-    border-radius:100%;
-    z-index: 10;
-    position: absolute;
     height: 20vh;
     width: 20vh;
     margin-left: 68vw;
@@ -127,22 +138,17 @@ display:inline;
     margin-left: 30vw;
     margin-top: 4vw;
     height: 3vh;
-    width: 42vw;
-    border-bottom: 2px solid red;
-    border-right: 2px solid red;
-    -moz-transform: skew(-45deg, 0deg);
-    -webkit-transform: skew(-45deg, 0deg);
-    transform: skew(-45deg, 0deg);
+    width: 42vw;    -webkit-animation: ringDraw .5s;
+    -moz-animation: ringDraw .5s;
+    animation: ringDraw .5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
+
 
 .IQInfo {
     z-index: 10;
     background-color: white;
-    border-bottom: 2px solid red;
-    border-right: 2px solid red;
-    -moz-transform: skew(-45deg, 0deg);
-    -webkit-transform: skew(-45deg, 0deg);
-    transform: skew(-45deg, 0deg);
     margin-left: 10vw;
     margin-top: 4.5vw;
     position: absolute;
@@ -150,32 +156,6 @@ display:inline;
 
 .IQText {
     margin-right: 2vw;
-    display: inline-block;
-    color: blue;
-    -moz-transform: skew(45deg, 0deg);
-    -webkit-transform: skew(45deg, 0deg);
-    transform: skew(45deg, 0deg);
-}
-
-
-/*.EliHead:hover  .lineForHead{
-display:inline;
-}*/
-
-.EliHead:hover + div {
-    display: inline;
-}
-
-.EliHead:hover{
-border-color:blue;
- -webkit-animation: borderDraw 2.7s;
-    -moz-animation: borderDraw 2.7s;
-    animation: borderDraw 2.7s;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-       -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-    animation-iteration-count: infinite;
-
 }
 
 .everythingIQ {
@@ -188,11 +168,6 @@ BEGINNING OF ARM
 */
 
 .EliArm {
-    border-style: dotted;
-    border-color: transparent;
-    border-radius:100%;
-    z-index: 10;
-    position: absolute;
     height: 80px;
     width: 80px;
     margin-left: 55vw;
@@ -206,22 +181,27 @@ BEGINNING OF ARM
     margin-top: 35vh;
     height: 3vh;
     width: 35vw;
-    border-bottom: 2px solid red;
-    border-right: 2px solid red;
-    -moz-transform: skew(-45deg, 0deg);
-    -webkit-transform: skew(-45deg, 0deg);
-    transform: skew(-45deg, 0deg);
+        -webkit-animation: armDraw .5s;
+    -moz-animation: armDraw .5s;
+    animation: armDraw .5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes armDraw {
+    from {
+        width:0%;
+    }
+    to {
+        width:35vw;
+    }
+
 }
 
 .ArmInfo {
     z-index: 10;
     background: white;
     width: 20vw;
-    border-bottom: 2px solid red;
-    border-right: 2px solid red;
-    -moz-transform: skew(-45deg, 0deg);
-    -webkit-transform: skew(-45deg, 0deg);
-    transform: skew(-45deg, 0deg);
     margin-left: 5vw;
     margin-top: 35vh;
     position: absolute;
@@ -229,27 +209,6 @@ BEGINNING OF ARM
 
 .ArmText {
     margin-right: 5vw;
-    display: inline-block;
-    color: blue;
-    -moz-transform: skew(45deg, 0deg);
-    -webkit-transform: skew(45deg, 0deg);
-    transform: skew(45deg, 0deg);
-}
-
-.EliArm:hover + div {
-    display: inline;
-}
-
-.EliArm:hover{
-border-color:blue;
- -webkit-animation: borderDraw 2.7s;
-    -moz-animation: borderDraw 2.7s;
-    animation: borderDraw 2.7s;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-       -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-    animation-iteration-count: infinite;
-
 }
 
 .everythingArm {
@@ -257,8 +216,8 @@ border-color:blue;
 }
 
 .Eli {
-    height: 100vh;
-    position: relative;
+    height: 100%;
+    position: absolute;
     opacity: 0;
     -webkit-animation: eli 2.7s;
     -moz-animation: eli 2.7s;
@@ -281,6 +240,7 @@ border-color:blue;
     100% {
         left: 55vw;
         opacity: 1;
+        position: absolute;
     }
 }
 
@@ -292,6 +252,7 @@ border-color:blue;
     100% {
         left: 55vw;
         opacity: 1;
+        position: absolute;
     }
 }
 
@@ -303,6 +264,7 @@ border-color:blue;
     100% {
         left: 55vw;
         opacity: 1;
+        position: absolute;
     }
 }
 
@@ -311,14 +273,6 @@ border-color:blue;
     width: auto;
     float: right;
     position: relative;
-    -webkit-animation: EliName 3s ease;
-    -webkit-animation-fill-mode: backwards;
-/*    -webkit-animation: EliName 4s ease;
-    -webkit-animation-fill-mode: backwards;
-    -moz-animation: EliName 4s;
-    -webkit-animation-delay: 3s;
-    animation: EliName 1.7s;
-    animation-delay: 3s;*/
 }
 
 .wholeScreen {
@@ -332,6 +286,7 @@ border-color:blue;
     background-image: url("./images/Stroke.png");
     -webkit-animation: bgStroke 1.3s ease;
     -webkit-animation-fill-mode: backwards;
+    animation: bgStroke 1.3s ease;
 }
 
 @-webkit-keyframes bgStroke {
